@@ -1,0 +1,19 @@
+{
+  "name": "maple-spec-simulator-server",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "mocha src/test",
+    "build": "tsc"
+  },
+  "author": "HearthR",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^12.11.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "mocha": "^6.2.1"
+  }
+}
