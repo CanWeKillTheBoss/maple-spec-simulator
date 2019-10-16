@@ -1,4 +1,4 @@
-type statObject = {hp : number, mp : number, str : number, dex : number, int : number, luk : number};
+type statObject = {attack : number, hp : number, mp : number, str : number, dex : number, int : number, luk : number};
 type cubeOptionObject = {mainStat : number, subStat : number, attack : number};
 type criticalObject = {min : number, max : number, damage : number};
 type itemObject = any; // todo
@@ -8,7 +8,6 @@ class character {
     lv : number;
     job : string;
     stats : statObject;
-    attack : number;
     cubeOptions : cubeOptionObject;
     weaponConst : number;
     weaponExpert : number;
@@ -30,3 +29,4 @@ class character {
 };
 
 
+module.exports = character;
