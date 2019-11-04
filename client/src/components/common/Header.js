@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-// import { device } from 'styles/device';
-
-// const FontAwesomeIconBlock = styled(FontAwesomeIcon)`
-//   margin-right: 0.2rem;
-// `;
 
 const HeaderBlock = styled.header`
   display: flex;
@@ -33,6 +28,10 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const UserCircle = styled(Link)`
+  margin: 0 auto;
+`;
+
 const UserWrapper = styled.div`
   background: #ffffff;
   border-radius: 50%;
@@ -47,21 +46,21 @@ const Header = () => {
   return (
     <HeaderBlock>
       <Logo to=''>CanWeKillTheBoss</Logo>
+      <UserCircle to='/mypage/main'>
+        <UserWrapper></UserWrapper>
+      </UserCircle>
       <Links>
-        <StyledLink to='/res/main'>
+        <StyledLink to='/main'>
           <span>&nbsp;&nbsp;Home</span>
         </StyledLink>
-        <StyledLink to='/qna'>
-          <span>&nbsp;&nbsp;Q&A 게시판</span>
+        <StyledLink to='/community'>
+          <span>&nbsp;&nbsp;커뮤니티</span>
         </StyledLink>
         <StyledLink to='/item'>
           <span>&nbsp;&nbsp;아이템</span>
         </StyledLink>
         <StyledLink to='/service/main'>
           <span>&nbsp;&nbsp;고객센터</span>
-        </StyledLink>
-        <StyledLink to='/mypage/main'>
-          <UserWrapper></UserWrapper>
         </StyledLink>
       </Links>
     </HeaderBlock>

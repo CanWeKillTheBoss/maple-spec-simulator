@@ -12,7 +12,7 @@ const FooterBlock = styled.footer`
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 8rem;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: #0000008a;
 `;
 
@@ -28,10 +28,10 @@ const Logo = styled(Link)`
 `;
 
 const StyledLink = styled(Link)`
-  margin-left: 0.8rem;
+  margin-left: 1rem;
 
   & + & {
-    margin-left: 0.8rem;
+    margin-left: 1rem;
   }
 `;
 
@@ -39,7 +39,7 @@ const Footer = () => {
   return (
     <FooterBlock className='footer'>
       <Logo to='' className='logo'>
-        Copyright by KUCS
+        Copyright by CWKTB
       </Logo>
       <Links>
         <StyledLink to='' className='btn_notice'>

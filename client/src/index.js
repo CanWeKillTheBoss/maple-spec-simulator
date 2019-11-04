@@ -9,7 +9,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import { composeWithDevTools } from 'redux-devtools-extension';
-// import 'react-app-polyfill/ie11';
 import rootReducer, { rootSaga } from './modules';
 
 const sagaMiddleware = createSagaMiddleware();

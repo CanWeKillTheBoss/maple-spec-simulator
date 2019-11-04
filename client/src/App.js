@@ -1,11 +1,17 @@
 import React from 'react';
 // import { BrowserRouter } from 'react-router-dom';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
-// import { device } from 'styles/device';
 
 //pages
-import { MainPage, NotFoundPage } from 'pages';
+import {
+  MainPage,
+  NotFoundPage,
+  CommunityPage,
+  ItemPage,
+  ServicePage,
+  MyPageMain
+} from 'pages';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -36,7 +42,11 @@ const App = () => {
     <>
       <GlobalStyle />
       <Switch>
-        <Route exact path='/' component={MainPage} />
+        <Route exact path='/main' component={MainPage} />
+        <Route path='/mypage/main' component={MyPageMain} />
+        <Route path='/community' component={CommunityPage} />
+        <Route path='/item' component={ItemPage} />
+        <Route path='/service/main' component={ServicePage} />
         <Route component={NotFoundPage} />
       </Switch>
     </>
