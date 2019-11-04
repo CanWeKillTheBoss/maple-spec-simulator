@@ -39,7 +39,7 @@ const Footer = () => {
   return (
     <FooterBlock className='footer'>
       <Logo to='' className='logo'>
-        Copyright by KLUE
+        Copyright by KUCS
       </Logo>
       <Links>
         <StyledLink to='' className='btn_notice'>
