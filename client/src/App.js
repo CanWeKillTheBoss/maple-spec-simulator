@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import { BrowserRouter } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
+// import { device } from 'styles/device';
 
-function App() {
+//pages
+import { MainPage, NotFoundPage } from 'pages';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    /* autoprefixer grid : autoplace */
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  * {
+    box-sizing: inherit;
+  }
+  
+  a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+  html, body, #root{
+    height: 100%
+  }
+`;
+
+// const store = configure();
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <Provider store={store}>
+    <>
+      <GlobalStyle />
+      <Switch>
+        <Route exact path='/' component={MainPage} />
+        <Route component={NotFoundPage} />
+      </Switch>
+    </>
+    // </Provider>
   );
-}
+};
 
 export default App;
